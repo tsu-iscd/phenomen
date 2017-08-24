@@ -4,7 +4,7 @@ Vulnerable web application.
 
 ## Getting started
 
-Install
+Install:
 
 ```
 python3.6 -m pip install -r requirements.txt
