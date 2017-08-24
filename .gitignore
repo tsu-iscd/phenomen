@@ -1,0 +1,5 @@
+.idea/
+venv/
+configs/project.env
+*.pyc
+.python-version

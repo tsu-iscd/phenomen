@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %} Home {% endblock %}
+{% block body %}
+	<div class="container main-content">
+        <div class="row mt centered main-container">
+            <div class="col-sm-4 panda-image">
+                <embed type="image/svg+xml" src="{{ panda }}" ></embed>
+            </div>
+            <div class="col-sm-6 col-sm-offset-4">
+                <div class="text-center">
+                    <h1> {{ title | safe }} </h1>
+                    <p>
+                        {{ msg | safe }}
+                    </p>
+                </div>
+            </div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

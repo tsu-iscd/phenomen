@@ -1,0 +1,126 @@
+.bootstrap-tagsinput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #d2d6de;
+    display: block;
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    vertical-align: middle;
+    max-width: 100%;
+    cursor: text;
+    padding: 4px 6px;
+    line-height: 22px;
+}
+
+.bootstrap-tagsinput input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 6px;
+    margin: 0;
+    width: auto;
+    max-width: inherit;
+}
+
+.bootstrap-tagsinput.form-control input::-moz-placeholder {
+    color: #777;
+    opacity: 1;
+}
+
+.bootstrap-tagsinput.form-control input:-ms-input-placeholder {
+    color: #777;
+}
+
+.bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
+    color: #777;
+}
+
+.bootstrap-tagsinput input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: "x";
+    padding: 0px 2px;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:hover:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.config-form {
+    margin-top: 20px
+}
+
+.alert-my {
+    margin-bottom: 5px;
+    display: none;
+}
+
+.table-logs {
+    text-align: left;
+}
+
+h1,h2,h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.change-motd {
+    padding-top: 50px;
+}
+
+.btn-motd {
+    border-color: #9c412f;;
+    background-color: #dd4b39;
+}
+
+.btn-motd:hover {
+    border-color: #9c412f;;
+    background-color: #9c412f;
+}
+
+.main-container {
+    margin-top: 20%;
+}
+
+.panda-image {
+    position: absolute;
+    top: 240px;
+    left: 80px;
+    opacity: .6;
+    transform: scale(1.5);
+}

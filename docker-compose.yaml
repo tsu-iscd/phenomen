@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ui:
+    build: .
+    env_file: configs/app.env
+    ports:
+      - "${UI_PORT}:80"
+    volumes:
+      - ./app/static:/app/static:ro
+      - ./app/templates:/app/app/templates:ro
