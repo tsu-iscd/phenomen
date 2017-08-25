@@ -1,30 +1,14 @@
 from os import path
-from app.abac.runtime import PIP, PDP, RequestCtx, Decision
-from app.config import GENERATED_DIR
 
+from app.access_control.abac.runtime import PIP, PDP, RequestCtx, Decision
+from app.config import GENERATED_DIR
 from .bindings import *
 
-###############################################################################
-# Mockup for PIP database
-###############################################################################
-PIP_DATA = """
-     {
-        "entities": [
-            {"type": "Subject", "name": "guest", "role": "guest"},
-            {"type": "Subject", "name": "user", "role": "user"},
-            {"type": "Subject", "name": "admin", "role": "admin"},
-            {"type": "UrlEntity", "path":"/"},
-            {"type": "UrlEntity", "path": "/motd"},
-            {"type": "UrlEntity", "path": "/admin"},
-            {"type": "UrlEntity", "path": "/stats"}
-        ]
-    }
-"""
-###############################################################################
+from app.access_control import IAccessController
 
 
-class AccessController(object):
-    def __init__(self):
+class ABAC(IAccessController):
+    def __init__(self, pip_data):
         # Initialize PDP
         policy_file = path.join(GENERATED_DIR, "policy.lua")
         with open(policy_file) as f:
@@ -36,7 +20,7 @@ class AccessController(object):
         with open(scheme_file) as f:
             scheme = f.read()
         # Initialize PIP
-        self.PIP = PIP.from_json(scheme, PIP_DATA, self.factory)
+        self.PIP = PIP.from_json(scheme, pip_data, self.factory)
 
     # Check whether the request is allowed in the current access
     # policy.

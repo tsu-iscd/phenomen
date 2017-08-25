@@ -2,7 +2,7 @@ import os
 import uuid
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
-GENERATED_DIR = os.path.join(BASEDIR, "abac", "generated")
+GENERATED_DIR = os.path.join(BASEDIR, "access_control", "abac", "generated")
 
 PORT = 9090
 REDIS_PORT = 6379

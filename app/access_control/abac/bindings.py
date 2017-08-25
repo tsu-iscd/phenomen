@@ -1,6 +1,7 @@
 from .generated import ast
 from .generated.decoder import ASTFactory
 
+
 ###############################################################################
 # Implementation of the abstract classes
 ###############################################################################
@@ -27,6 +28,7 @@ class Subject(ast.Subject):
 class MyFactory(ASTFactory):
     def createUrlEntity(self, obj):
         return UrlEntity(**obj)
+
     def createSubject(self, obj):
         return Subject(**obj)
 

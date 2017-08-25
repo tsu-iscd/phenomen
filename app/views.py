@@ -1,6 +1,5 @@
 from flask import (render_template, session, request,
-                  jsonify, redirect, send_file, url_for)
-
+                   redirect, url_for)
 
 from app import app
 from app.users import *
@@ -18,6 +17,7 @@ UNPROTECTED = [
     "/favicon.ico",
     "/login",
     "/logout",
+    "/robots.txt",
 ]
 
 MOTD = """
