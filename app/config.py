@@ -7,6 +7,7 @@ GENERATED_DIR = os.path.join(BASEDIR, "access_control", "abac", "generated")
 PORT = 9090
 REDIS_PORT = 6379
 
+
 class DebugConfig(object):
     SECRET_KEY = 'debug'
     DEBUG = True
