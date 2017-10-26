@@ -23,6 +23,7 @@ ABAC_CONFIG = """
     }
 """
 
+"""
 guest_role = rbac.Role(
     name="guest",
     permissions=[
@@ -48,9 +49,9 @@ RBAC_CONFIG = [
     rbac.User("admin", [admin_role, guest_role]),
     rbac.User("guest", [guest_role])
 ]
-
+"""
 #app.access_controller = abac.ABAC(ABAC_CONFIG)
-app.access_controller = rbac.RBAC(RBAC_CONFIG)
+app.access_controller = rbac.RBAC()
 
 # Get the routes back (probably not a best way but it works)
 from app.views import app
